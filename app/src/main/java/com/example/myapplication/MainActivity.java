@@ -7,6 +7,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -33,14 +35,10 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 for(int i = 0; i < sortedMatNumber.length - 1; i++){
-                    if(sortedMatNumber[i] > sortedMatNumber[i+1]){
-                       int temp = sortedMatNumber[i];
-                       sortedMatNumber[i] = sortedMatNumber[i+1];
-                       sortedMatNumber[i+1] = temp;
-                    }
+                    Arrays.sort(sortedMatNumber);
                 }
 
-                txtvSortedMatNumber.setText(sortedMatNumber.toString());
+                txtvSortedMatNumber.setText(Arrays.toString(sortedMatNumber));
 
             }
         });
