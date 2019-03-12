@@ -9,17 +9,17 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnSendToServer = findViewById(R.id.btnSendToServer);
-    Button btnSortMatNumber = findViewById(R.id.btnSortMatNumber);
-
-    EditText etxtMatNumber = findViewById(R.id.etxtMatNumber);
-
-    TextView txtvSortedMatNumber = findViewById(R.id.txtvSortedMatNumber);
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button btnSendToServer = findViewById(R.id.btnSendToServer);
+        Button btnSortMatNumber = findViewById(R.id.btnSortMatNumber);
+
+        final EditText etxtMatNumber = findViewById(R.id.etxtMatNumber);
+
+        final TextView txtvSortedMatNumber = findViewById(R.id.txtvSortedMatNumber);
 
         btnSortMatNumber.setOnClickListener(new View.OnClickListener() {
             @Override
