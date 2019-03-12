@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                         sortedMatNumber[i] = Character.getNumericValue(matNumber.charAt(i));
                 }
 
-                for(int i = 0; i < sortedMatNumber.length; i++){
+                for(int i = 0; i < sortedMatNumber.length - 1; i++){
                     if(sortedMatNumber[i] > sortedMatNumber[i+1]){
                        int temp = sortedMatNumber[i];
                        sortedMatNumber[i] = sortedMatNumber[i+1];
