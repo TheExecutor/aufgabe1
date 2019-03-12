@@ -32,6 +32,15 @@ public class MainActivity extends AppCompatActivity {
                         sortedMatNumber[i] = Character.getNumericValue(matNumber.charAt(i));
                 }
 
+                for(int i = 0; i < sortedMatNumber.length; i++){
+                    if(sortedMatNumber[i] > sortedMatNumber[i+1]){
+                       int temp = sortedMatNumber[i];
+                       sortedMatNumber[i] = sortedMatNumber[i+1];
+                       sortedMatNumber[i+1] = temp;
+                    }
+                }
+
+                txtvSortedMatNumber.setText(sortedMatNumber.toString());
 
             }
         });
